@@ -1,7 +1,7 @@
 "use client"
 import data from "@/data.js"
 import { usePathname } from 'next/navigation';
-import ShopItems from "./../components/ItemsPart/ShopItems";
+import ShopItems from "@/shopcomponents/ItemsPart/ShopItems";
 
 export default function CategoryItems() {
   const pathname = usePathname();

@@ -20,9 +20,5 @@ export default function ShopLayout({
         {children}
       </div>
     </main>
-
-
-
-
   );
 }

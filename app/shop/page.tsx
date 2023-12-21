@@ -1,4 +1,3 @@
-"use client"
 import data from "@/data"
 import ShopItems from '@/shopcomponents/ItemsPart/ShopItems';
 

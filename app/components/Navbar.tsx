@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import { FaUser,FaShoppingCart } from "react-icons/fa";
 
 export default function Navbar() {
     return (
@@ -15,10 +16,10 @@ export default function Navbar() {
                     <li className="font-raleway font-semibold">  <Link href="/about">About</Link></li>
                     <li className="font-raleway font-semibold"><Link href="/contactus">Contact Us</Link></li>
                 </ul>
-                {/* <ul className="flex items-center space-x-1">                                            
-            <li className="font-raleway font-semibold"> <FontAwesomeIcon className='p-1' icon={faUser as IconProp} /></li>
-            <li className="font-raleway font-semibold"> <FontAwesomeIcon className='p-1' icon={faShoppingCart as IconProp} /></li>
-        </ul> */}
+                <ul className="flex items-center space-x-1">                                            
+            <li className="font-raleway font-semibold text-rich-bordeaux" > <FaUser/></li>
+            <li className="font-raleway font-semibold text-rich-bordeaux"> <FaShoppingCart /></li>
+        </ul>
 
                 {/* mobile-tab */}
 
