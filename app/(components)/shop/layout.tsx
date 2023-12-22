@@ -8,7 +8,7 @@ export default function ShopLayout({
 
 }) {
 
-  const categories = ['All', ...new Set(data?.map((item) => item.category))];
+  const categories = ['all', ...new Set(data?.map((item) => item.category))];
   return (
 
     <main className="flex flex-wrap md:flex-nowrap justify-center md:justify-start ">

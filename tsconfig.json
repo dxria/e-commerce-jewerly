@@ -21,10 +21,12 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@/components*": ["app/components/*"],
-      "@/shopcomponents*": ["app/shop/components/*"],
-      "@/data*": ["data.js"],
-      "@/adresses*": ["adresses.js"]
+      "@/components*": ["app/(components)/*"],
+      "@/shopcomponents*": ["app/(components)/shop/components*"],
+      "@/homecomponents*": ["app/(components)/home*"],
+      "@/data*": ["database/data.js"],
+      "@/adresses*": ["database/adresses.js"],
+      "@/feedback*": ["database/feedback.js"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
