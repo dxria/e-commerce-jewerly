@@ -3,7 +3,7 @@ import data from "@/data";
 import TitleBox from "./components/TitleBox";
 import Glider from 'react-glider';
 import 'glider-js/glider.min.css';
-import Item from "@/shopcomponents/ItemsPart/Item";
+import Item from "@/shopcomponents/(ItemsPart)/Item";
 
 export default function NewArrivals() {
   const toDate = (str: string) => new Date(str)
@@ -13,7 +13,7 @@ export default function NewArrivals() {
   );
 
   return (
-    <section className="p-10 md:mx-20">
+    <section className="w-[70%] p-10 m-auto">
       <TitleBox text="NEW ARRIVALS" />
 
       <Glider

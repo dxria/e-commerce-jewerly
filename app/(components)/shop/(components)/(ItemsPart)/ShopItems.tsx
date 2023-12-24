@@ -3,10 +3,12 @@ import Item from "./Item";
 type ShopItemsProps = {
   data: {
     title: string;
+    slug:string;
     description: string;
     price: number;
     category: string;
     img: string;
+
   }[];
 };
 

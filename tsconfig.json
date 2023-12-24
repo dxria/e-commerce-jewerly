@@ -22,7 +22,7 @@
     "paths": {
       "@/*": ["./*"],
       "@/components*": ["app/(components)/*"],
-      "@/shopcomponents*": ["app/(components)/shop/components*"],
+      "@/shopcomponents*": ["app/(components)/shop/(components)*"],
       "@/homecomponents*": ["app/(components)/home*"],
       "@/data*": ["database/data.js"],
       "@/adresses*": ["database/adresses.js"],

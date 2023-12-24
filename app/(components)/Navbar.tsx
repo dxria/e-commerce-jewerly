@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import React from 'react'
 import { FaUser, FaShoppingCart } from "react-icons/fa";
+import { BsBag } from "react-icons/bs";
+
 
 export default function Navbar() {
     const pages = ['Home', 'Shop', 'About', 'Contact']
@@ -14,14 +15,14 @@ export default function Navbar() {
                 <ul className="hidden lg:flex items-center space-x-24">
                     {pages.map((page, index) => (
                         <li key={index} className='font-raleway font-semibold'>
-                            <Link href={`/${(page.toLowerCase() === 'home' ? '' : page.toLowerCase())}`}>{page}</Link>
+                            <Link href={`/${(page.toLowerCase() === 'home' ? '' : page.toLowerCase() === 'shop' ? 'shop/category/all' : page.toLowerCase())}`}>{page}</Link>
                         </li>
                     )
                     )}
                 </ul>
                 <ul className="flex items-center space-x-1">
                     <li className="font-raleway font-semibold text-rich-bordeaux" > <FaUser /></li>
-                    <li className="font-raleway font-semibold text-rich-bordeaux"> <FaShoppingCart /></li>
+                    <li className="font-raleway font-semibold text-rich-bordeaux"> <BsBag /></li>
                 </ul>
 
                 {/* mobile-tab */}

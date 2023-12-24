@@ -1,6 +1,8 @@
 const data = [
     {
+        
         title: "Ring 'Shiny drop'",
+        slug: 'ring-shiny-drop',   
         description: 'The 925 sterling silver ring has a single pear-shaped stone placed slightly above the delicate pavé row and is securely fastened.',
         price: 120,
         category: 'ring',
@@ -9,6 +11,7 @@ const data = [
     },
     {
         title: "Ring 'Herbarium'",
+        slug: 'ring-herbarium',
         description: 'Ring in 925 silver reflects fresh floral motifs. Three marquise-shaped stones and two pear-shaped stones are the centerpieces.',
         price: 150,
         category: 'ring',
@@ -17,6 +20,7 @@ const data = [
     },
     {
         title: "Ring 'Scarlet witch'",
+        slug: 'ring-scarlet-witch',
         description: '14k rosegold ring shaped like the Scarlet Witch headdress, has four arrows and is inlaid with a red faux crystal in the middle.',
         price: 130,
         category: 'ring',
@@ -25,6 +29,7 @@ const data = [
     },
     {
         title: "Ring 'Red heart'",
+        slug: 'ring-red-heart',  
         description: "The centerpiece is a heart-shaped artificial red crystal that rises above the ring's surface, which is inlaid with sparkling pavé.",
         price: 150,
         category: 'ring',
@@ -33,6 +38,7 @@ const data = [
     },
     {
         title: "Ring 'Wish'",
+        slug: 'ring-wish', 
         description: "925 sterling silver plated in 14k rose gold is encrusted with a row of pavé stones, following the curve of a forked knuckle.",
         price: 170,
         category: 'ring',
@@ -41,6 +47,7 @@ const data = [
     },
     {
         title: "Bracelet 'Shiny plates'",
+        slug: 'bracelet-shiny-plates',
         description: "This 925 sterling silver bracelet features a series of triangular plates separated by eight brilliant cubic zirconia stones.",
         price: 220,
         category: 'bracelet',
@@ -49,6 +56,7 @@ const data = [
     },
     {
         title: "Bracelet 'Shiny drop'",
+        slug: 'bracelet-shiny-drop',
         description: "The bracelet has a pear-cut cubic zirconia stone in the middle, which is slightly raised above the delicate pavé path.",
         price: 200,
         category: 'bracelet',
@@ -57,6 +65,7 @@ const data = [
     },
     {
         title: "Bracelet 'Red heart'",
+        slug: 'bracelet-red-heart',  
         description: "The  artificial red heart-shaped crystal accent is partnered with a row of sparkling cubic zirconia stones.",
         price: 180,
         category: 'bracelet',
@@ -65,6 +74,7 @@ const data = [
     },
     {
         title: "Bracelet 'Herbarium'",
+        slug: 'bracelet-herbarium',
         description: "This silver jewelry, reminiscent of dried flowers and leaves, is inlaid with marquise- and pear-shaped cubic zirconia.",
         price: 180,
         category: 'bracelet',
@@ -73,6 +83,7 @@ const data = [
     },
     {
         title: "Necklace 'Shiny drop'",
+        slug: 'necklace-shiny-drop',
         description: "This 925 sterling silver necklace has a pear-shaped cubic zirconia stone as its main element.",
         price: 230,
         category: 'necklace',
@@ -81,6 +92,7 @@ const data = [
     },
     {
         title: "Necklace 'Captain Marvel'",
+        slug: 'necklace-captain-marvel', 
         description: "The 14k gold-plated necklace features an eight-pointed star with a row of pavé. It is engraved with the inscription 'HIGHER FURTHER FASTER'",
         price: 340,
         category: 'necklace',
@@ -89,6 +101,7 @@ const data = [
     },
     {
         title: "Earrings 'Captain Marvel'",
+        slug: 'earrings-captain-marvel',
         description: "14k gold-plated earrings are characterized by a modern graphic design. The meteor's tail is inlaid with a row of pavé.",
         price: 150,
         category: 'earrings',

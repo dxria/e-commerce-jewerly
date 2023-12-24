@@ -5,8 +5,6 @@ import Feedback from "@/homecomponents/Feedback/Feedback";
 import Maps from "@/homecomponents/Maps/Maps";
 import feedback from "@/feedback";
 
-
-
 export default function Home() {
   return (
     <main>

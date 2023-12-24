@@ -1,5 +1,5 @@
 import data from "@/data"
-import ShopItems from '@/shopcomponents/ItemsPart/ShopItems';
+import ShopItems from '@/shopcomponents/(ItemsPart)/ShopItems';
 
 
 // type ShopProps = {
