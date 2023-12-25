@@ -26,7 +26,10 @@
       "@/homecomponents*": ["app/(components)/home*"],
       "@/data*": ["database/data.js"],
       "@/adresses*": ["database/adresses.js"],
-      "@/feedback*": ["database/feedback.js"]
+      "@/feedback*": ["database/feedback.js"],
+      "@/dbcontent*": ["db-connection.ts"],
+      "@/models*": ["app/(models)/*"],
+      "@/api*": ["app/(api)/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

@@ -13,7 +13,7 @@ const feedback = [
         review: 'lorum ipsum',
     },
     {
-        username: 'pollyqrl',
+        username: 'ria.ktiw',
         item: {
             title: "Bracelet 'Red heart'",
             description: "The  artificial red heart-shaped crystal accent is partnered with a row of sparkling cubic zirconia stones.",
@@ -26,7 +26,7 @@ const feedback = [
         review: 'lorum ipsum',
     },
     {
-        username: 'pollyqrl',
+        username: 'stxr',
         item: {
             title: "Earrings 'Captain Marvel'",
             description: "14k gold-plated earrings are characterized by a modern graphic design. The meteor's tail is inlaid with a row of pavé.",
@@ -39,7 +39,7 @@ const feedback = [
         review: 'lorum ipsum',
     },
     {
-        username: 'pollyqrl',
+        username: 'mxragery',
         item: {
             title: "Necklace 'Shiny drop'",
             description: "This 925 sterling silver necklace has a pear-shaped cubic zirconia stone as its main element.",
@@ -52,7 +52,7 @@ const feedback = [
         review: 'lorum ipsum',
     },
     {
-        username: 'pollyqrl',
+        username: 'maryjpg',
         item: {
             title: "Bracelet 'Red heart'",
             description: "The  artificial red heart-shaped crystal accent is partnered with a row of sparkling cubic zirconia stones.",
@@ -65,7 +65,7 @@ const feedback = [
         review: 'lorum ipsum',
     },
     {
-        username: 'pollyqrl',
+        username: 'landoty',
         item: {
             title: "Earrings 'Captain Marvel'",
             description: "14k gold-plated earrings are characterized by a modern graphic design. The meteor's tail is inlaid with a row of pavé.",
@@ -78,7 +78,7 @@ const feedback = [
         review: 'lorum ipsum',
     },
     {
-        username: 'pollyqrl',
+        username: 'hfsweh',
         item: {
             title: "Necklace 'Shiny drop'",
             description: "This 925 sterling silver necklace has a pear-shaped cubic zirconia stone as its main element.",
