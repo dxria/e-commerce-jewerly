@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FaUser, FaShoppingCart } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { BsBag } from "react-icons/bs";
 
 
@@ -15,7 +15,7 @@ export default function Navbar() {
                 <ul className="hidden lg:flex items-center space-x-24">
                     {pages.map((page, index) => (
                         <li key={index} className='font-raleway font-semibold'>
-                            <Link href={`/${(page.toLowerCase() === 'home' ? '' : page.toLowerCase() === 'shop' ? 'shop/category/all' : page.toLowerCase())}`}>{page}</Link>
+                            <Link href={`/${(page.toLowerCase() === 'home' ? '' : page.toLowerCase() === 'shop' ? 'category/all' : page.toLowerCase())}`}>{page}</Link>
                         </li>
                     )
                     )}

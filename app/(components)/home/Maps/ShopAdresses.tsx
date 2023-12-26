@@ -1,8 +1,9 @@
 import React from 'react'
 import Shop from './Shop';
-type AdressesTypeProps =
+type AddressesTypeProps =
     {
-        adresses: {
+        addresses: {
+            id: string,
             city: string;
             street:string;
             workHours: string;
@@ -10,11 +11,11 @@ type AdressesTypeProps =
         }[];
     }
 
-export default function ShopAdresses({adresses} : AdressesTypeProps) {
+export default function ShopAdresses({addresses} : AddressesTypeProps) {
   return (
     <div>
-        {adresses?.map((adress, index) => (
-          <Shop key={index} adress={adress} />
+        {addresses?.map((address, index) => (
+          <Shop key={index} address={address} />
         ))}
       </div>
   )

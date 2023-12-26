@@ -3,16 +3,23 @@ import Carousel from "@/homecomponents/Carousel";
 import Delivery from "@/homecomponents/Delivery";
 import Feedback from "@/homecomponents/Feedback/Feedback";
 import Maps from "@/homecomponents/Maps/Maps";
-import feedback from "@/feedback";
+import getAddresses from "@/api/addresses/getAddresses"
+import getFeedback from "@/api/feedback/getFeedback"
+import getJewels from "@/api/jewels/getJewels"
 
-export default function Home() {
+
+
+export default async function Home() {
+  const addresses = await getAddresses()
+  const feedback = await getFeedback()
+  const jewels = await getJewels()
   return (
     <main>
       <Carousel/>
-      <NewArrivals />
+      <NewArrivals jewels={jewels}/>
       <Delivery/>
       <Feedback feedback={feedback}/>
-      <Maps />
+      <Maps addresses={addresses}/>
     </main>
   )
 }

@@ -1,8 +1,9 @@
 import React from 'react'
 
-type AdressesType =
+type AddressesType =
     {
-        adress: {
+        address: {
+            id: string,
             city: string;
             street:string;
             workHours: string;
@@ -10,13 +11,13 @@ type AdressesType =
         };
     }
 
-export default function Shop({ adress }: AdressesType) {
+export default function Shop({ address }: AddressesType) {
     return (
         <div>
-            <div><b>{adress.city}</b></div>
-            <div><i>Adress:</i> {adress.street}</div>
-            <div><i>Working hours:</i> {adress.workHours}</div>
-            <div><i>Phone Number</i> {adress.phoneNumber}</div>
+            <div><b>{address.city}</b></div>
+            <div><i>Adress:</i> {address.street}</div>
+            <div><i>Working hours:</i> {address.workHours}</div>
+            <div><i>Phone Number</i> {address.phoneNumber}</div>
 
     </div>
     )

@@ -1,12 +1,9 @@
-import mongoose, { ConnectOptions } from 'mongoose'
+import mongoose from 'mongoose'
 
 const connect = async() => {
     try {
         if (process.env.MONGODB_URI) {
-            await mongoose.connect( process.env.MONGODB_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        } as ConnectOptions);
+            await mongoose.connect( process.env.MONGODB_URI);
         }
         
         console.log("mongo connected succesfully")

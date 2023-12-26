@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import { BsBag } from "react-icons/bs";
 import { LuPlus } from "react-icons/lu";

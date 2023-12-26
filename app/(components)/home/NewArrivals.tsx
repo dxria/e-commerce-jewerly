@@ -1,14 +1,26 @@
 "use client"
-import data from "@/data";
+//import data from "@/data";
 import TitleBox from "./components/TitleBox";
 import Glider from 'react-glider';
 import 'glider-js/glider.min.css';
 import Item from "@/shopcomponents/(ItemsPart)/Item";
 
-export default function NewArrivals() {
+type JewelsProps = {
+  jewels: {
+    title: string;
+    slug:string;
+    description: string;
+    price: number;
+    category: string;
+    img: string;
+    createdAt: string,
+  }[];
+};
+
+export default function NewArrivals( {jewels} : JewelsProps) {
   const toDate = (str: string) => new Date(str)
 
-  const sortedDesc = data.sort(
+  const sortedDesc = jewels.sort(
     (objA, objB) => Number(toDate(objB.createdAt)) - Number(toDate(objA.createdAt)),
   );
 

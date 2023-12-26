@@ -1,5 +1,3 @@
-import data from "@/data"
-
 export default function ShopLayout({
   children,
 }: {
@@ -8,7 +6,6 @@ export default function ShopLayout({
 }) {
 
   return (
-
     <main>
         {children}    
     </main>

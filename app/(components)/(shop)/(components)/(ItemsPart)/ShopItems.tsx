@@ -8,7 +8,7 @@ type ShopItemsProps = {
     price: number;
     category: string;
     img: string;
-
+    createdAt:string,
   }[];
 };
 
