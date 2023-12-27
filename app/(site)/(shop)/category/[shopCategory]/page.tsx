@@ -1,4 +1,4 @@
-import ShopItems from '@/shopcomponents/(ItemsPart)/ShopItems';
+import ShopItems from '@/components/shop/ItemsPart/ShopItems';
 import getJewels from "@/api/jewels/getJewels"
 
 export default async function CategoryItems({ params }: { params: { shopCategory: string } }) {

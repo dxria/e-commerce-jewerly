@@ -1,9 +1,9 @@
 "use client"
 //import data from "@/data";
-import TitleBox from "./components/TitleBox";
+import TitleBox from "./TitleBox";
 import Glider from 'react-glider';
 import 'glider-js/glider.min.css';
-import Item from "@/shopcomponents/(ItemsPart)/Item";
+import Item from "@/components/shop/ItemsPart/Item";
 
 type JewelsProps = {
   jewels: {

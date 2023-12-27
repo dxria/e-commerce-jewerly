@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import TitleBox from '../components/TitleBox'
+import TitleBox from '../TitleBox'
 import Review from './Review'
 import Glider from 'react-glider';
 import 'glider-js/glider.min.css';

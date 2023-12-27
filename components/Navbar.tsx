@@ -21,7 +21,7 @@ export default function Navbar() {
                     )}
                 </ul>
                 <ul className="flex items-center space-x-1">
-                    <li className="font-raleway font-semibold text-rich-bordeaux" > <FaUser /></li>
+                    <li className="font-raleway font-semibold text-rich-bordeaux" > <Link href="/profile"><FaUser /></Link></li>
                     <li className="font-raleway font-semibold text-rich-bordeaux"> <BsBag /></li>
                 </ul>
 

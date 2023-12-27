@@ -1,6 +1,6 @@
 // import adresses from "@/adresses";
 import React from 'react'
-import TitleBox from '../components/TitleBox'
+import TitleBox from '../TitleBox'
 import ShopAdresses from './ShopAdresses'
 
 type AddressesTypeProps =
