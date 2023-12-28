@@ -25,9 +25,8 @@
       "@/shopcomponents*": ["components/shop/*"],
       "@/homecomponents*": ["components/home*"],
       "@/profilecomponents*": ["components/profile*"],
-      "@/adresses*": ["database/adresses.js"],
-      "@/feedback*": ["database/feedback.js"],
-      "@/dbcontent*": ["db-connection.ts"],
+      "@/dbcontent*": ["utils/db-connection.ts"],
+      "@/database*": ["utils/database-connection.ts"],
       "@/models*": ["models/*"],
       "@/api*": ["app/api/*"],
     }

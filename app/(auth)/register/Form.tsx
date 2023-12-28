@@ -51,34 +51,35 @@ export default function Form() {
 
     }
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className='w-screen mt-32 flex items-center justify-center'>
+            <form onSubmit={handleSubmit} className='w-[30%]'>
                 <div className=''>
                     <div className='text-center'>
                         <h3 className='font-bold font-dmserifdisplay text-xl'>REGISTER</h3>
                     </div>
                     <div className='my-3'>
-                        <div className='flex space-x-5'>
-                            <input type='text' name='username' onChange={handleChange} />
-                            <label>Username</label>
+                        <div>
+                            <label className='font-bold text-sm font-raleway my-1'>Username</label>
+                            <input type='text' name='username' className="border-2 border-rich-bordeaux rounded-md px-5 py-2 w-full font-raleway text-sm" onChange={handleChange} />
                         </div>
                     </div>
                     <div className='my-3'>
-                        <div className='flex space-x-5'>
-                            <input type='text' name='email' onChange={handleChange} />
-                            <label>Email</label>
+                        <div>
+                            <label className='font-bold text-sm font-raleway my-1'>Email</label>
+                            <input type='text' name='email' className="border-2 border-rich-bordeaux rounded-md px-5 py-2 w-full font-raleway text-sm" onChange={handleChange} />
                         </div>
                     </div>
                     <div className='my-3'>
-                        <div className='flex space-x-5'>
-                            <input type='text' name='password' onChange={handleChange} />
-                            <label>Password</label>
+                        <div>
+                            <label className='font-bold text-sm font-raleway my-1'>Password</label>
+                            <input type='password' name='password' className="border-2 border-rich-bordeaux rounded-md px-5 py-2 w-full" onChange={handleChange} />
                         </div>
                     </div>
-                    {error && <span>{error}</span>}
-                    <div>
-                        <button className='px-6 py-2 bg-indigo-500' disabled={pending ? true : false}>{pending ? "Registering..." : "Register"}</button>
+                    {error && <div className='my-3 font-raleway'>{error}</div>}
+                    <div className='flex justify-center'>
+                        <button className='px-6 py-2 w-60 font-raleway font-semibold bg-rich-bordeaux border-2 border-rich-bordeaux rounded-md text-[#FFF]' disabled={pending ? true : false}>{pending ? "Registering..." : "Register"}</button>
                     </div>
+
 
                 </div>
             </form>

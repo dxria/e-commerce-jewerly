@@ -1,14 +1,13 @@
 import SideBar from "@/shopcomponents/SideBarPart/SideBar";
-import getJewels from "@/api/jewels/getJewels"
-
+import GetCategories from "@/shopcomponents/SideBarPart/GetCategories";
   
-export default async function ShopLayout({
+export default function ShopLayout({
   children,
 }: {
   children: React.ReactNode;
 
 }) {
-  const jewels = await getJewels()
+  const jewels:any = GetCategories();
   const categories = ['all', ...new Set(jewels.map((item:any) => item.category))] as string[];
 
   return (

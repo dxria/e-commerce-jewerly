@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+type feedbacksitem {
+  category    String
+  createdAt   String
+  description String
+  img         String
+  price       Int
+  title       String
+}
+
+model address {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  city        String
+  phoneNumber String
+  street      String
+  workHours   String
+}
+
+model feedback {
+  id       String        @id @default(auto()) @map("_id") @db.ObjectId
+  item     feedbacksitem
+  review   String
+  stars    Int
+  username String
+}
+
+model jewelry {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  category    String
+  createdAt DateTime @default(now())
+  description String
+  img         String
+  price       Int
+  slug        String
+  title       String
+}
+
+
+model user {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  username      String?   @unique
+  email         String?   @unique
+  hashedPassword String?
+}

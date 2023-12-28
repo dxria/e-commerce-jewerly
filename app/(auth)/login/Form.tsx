@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 import { signIn } from 'next-auth/react';
+import LogInWithGoogle from './LogInWithGoogle';
+
 
 export default function Form() {
     const router = useRouter();
@@ -45,30 +47,34 @@ export default function Form() {
 
     }
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className='w-screen mt-32 flex items-center justify-center'>
+            <form onSubmit={handleSubmit} className='w-[30%]'>
                 <div className=''>
                     <div className='text-center'>
                         <h3 className='font-bold font-dmserifdisplay text-xl'>LOGIN</h3>
                     </div>
                     <div className='my-3'>
-                        <div className='flex space-x-5'>
-                            <input type='text' name='email' onChange={handleChange} />
-                            <label>Email</label>
+                        <div>
+                            <label className='font-bold text-sm font-raleway my-1'>Email</label>
+                            <input type='text' name='email' className="border-2 border-rich-bordeaux rounded-md px-5 py-2 w-full font-raleway text-sm" onChange={handleChange} />
                         </div>
                     </div>
                     <div className='my-3'>
-                        <div className='flex space-x-5'>
-                            <input type='text' name='password' onChange={handleChange} />
-                            <label>Password</label>
+                        <div>
+                            <label className='font-bold text-sm font-raleway my-1'>Password</label>
+                            <input type='password' name='password' className="border-2 border-rich-bordeaux rounded-md px-5 py-2 w-full" onChange={handleChange} />
                         </div>
                     </div>
-                    {error && <span>{error}</span>}
-                    <div>
-                        <button className='px-6 py-2 bg-indigo-500' disabled={pending ? true : false}>{pending ? "Loading..." : "Log in"}</button>
+                    {error && <div className='my-3 font-raleway'>{error}</div>}
+                    <div className='flex justify-center'>
+                        <button className='px-6 py-2 w-60 font-raleway font-semibold bg-rich-bordeaux border-2 border-rich-bordeaux rounded-md text-[#FFF]' disabled={pending ? true : false}>{pending ? "Loading..." : "Log in"}</button>
                     </div>
-                    <div>
-                        Don&apos;t have an account yet? <Link href='/register' className='text-indigo-500'>Register.</Link>
+                    <div className='my-1 font-raleway flex justify-center'>or</div>
+                    <div className='flex justify-center'>
+                        <div className=''><LogInWithGoogle/></div>
+                    </div>
+                    <div className=' my-3 font-raleway'>
+                        Don&apos;t have an account yet? <Link href='/register' className='py-1 underline'>Register.</Link>
                     </div>
 
                 </div>

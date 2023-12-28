@@ -12,7 +12,7 @@ type ProductPageCardProps = {
         price: number,
         category: string,
         img: string,
-        createdAt: string
+        createdAt: Date
     }
 }
 
