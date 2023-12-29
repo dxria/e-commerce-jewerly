@@ -29,6 +29,7 @@
       "@/database*": ["utils/database-connection.ts"],
       "@/models*": ["models/*"],
       "@/api*": ["app/api/*"],
+      "@/prisma*": ["prisma/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

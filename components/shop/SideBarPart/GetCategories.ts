@@ -6,9 +6,10 @@ export default async function GetCategories() {
     try {
         await ConnectToDB();
         const jewels = await prisma.jewelry.findMany()
-        return jewels;
+        const categories = ['all', ...new Set(jewels?.map((item:any) => item.category))] as string[];
+        return categories;
     }
     catch (error) {
-        return NextResponse.json({ message: `error connecting to db. ${error}` }, { status: 500 });
+        NextResponse.json({ message: `error connecting to db. ${error}` }, { status: 500 });
     }
 }

@@ -16,6 +16,12 @@ export default async function Home() {
     const jewels = await prisma.jewelry.findMany()
     const feedback = await prisma.feedback.findMany()
 
+    // jewels.map((jewel) =>
+    // {
+    //   jewel.id = jewel.id.toString()
+    //   jewel.createdAt = jewel.createdAt.toLocaleString()
+    // } )
+    
     return (
       <main>
         <Carousel />

@@ -13,16 +13,19 @@ type JewelsProps = {
     price: number;
     category: string;
     img: string;
-    createdAt: Date,
+    createdAt: string,
   }[];
 };
 
 export default function NewArrivals( {jewels} : JewelsProps) {
-  // const toDate = (str: string) => new Date(str)
+   const toDate = (str: string) => new Date(str)
 
   const sortedDesc = jewels.sort(
-    (objA, objB) => Number(objB.createdAt) - Number(objA.createdAt),
+    (objA, objB) => Number(toDate(objB.createdAt)) - Number(toDate(objA.createdAt)),
   );
+  // const sortedDesc = jewels.sort(
+  //   (objA, objB) => Number(objB.createdAt) - Number(objA.createdAt),
+  // );
 
   return (
     <section className="w-[70%] p-10 m-auto">

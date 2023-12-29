@@ -1,15 +1,13 @@
 import SideBar from "@/shopcomponents/SideBarPart/SideBar";
 import GetCategories from "@/shopcomponents/SideBarPart/GetCategories";
   
-export default function ShopLayout({
+export default async function ShopLayout({
   children,
 }: {
   children: React.ReactNode;
 
 }) {
-  const jewels:any = GetCategories();
-  const categories = ['all', ...new Set(jewels.map((item:any) => item.category))] as string[];
-
+  const categories = await GetCategories() as string [];
   return (
 
     <main className="flex flex-wrap md:flex-nowrap justify-center md:justify-start ">

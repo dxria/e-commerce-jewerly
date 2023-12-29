@@ -35,7 +35,7 @@ model feedback {
 model jewelry {
   id          String @id @default(auto()) @map("_id") @db.ObjectId
   category    String
-  createdAt DateTime @default(now())
+  createdAt   String
   description String
   img         String
   price       Int
