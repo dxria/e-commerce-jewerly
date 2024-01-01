@@ -1,6 +1,5 @@
 import { DefaultSession } from "next-auth";
 
-// Default Session TYPE
 
 export function UserProfile( { user } : { user: DefaultSession["user"]}) {
     

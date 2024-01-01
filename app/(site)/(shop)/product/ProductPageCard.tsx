@@ -17,13 +17,11 @@ type ProductPageCardProps = {
 }
 
 export default function ProductPageCard({ product }: ProductPageCardProps) {
-    if (typeof document !== 'undefined') {
-        const dropdownButton = document.getElementById("#dropdownButton")
-        const dropdownList = document.getElementById("#dropdownList")
-        dropdownButton?.addEventListener("click", () => {
-            dropdownList?.classList.toggle("hidden")
-        });
-    }
+    // const handleDropdown = () => {
+    //     const dropdownList = document.getElementById("#dropdownList")
+    //     dropdownList?.classList.toggle("hidden")
+
+    // }
 
     return (
         <section>
@@ -43,10 +41,11 @@ export default function ProductPageCard({ product }: ProductPageCardProps) {
                         <BsBag />
                         <div>BUY</div>
                     </button>
-                    <div> 
+                    <div>
                         <div className='flex items-center space-x-5 mb-3 cursor-default' id='dropdownButton'>
                             <div className='font-semibold'>DELIVERY OPTIONS</div>
-                            <button><LuPlus /></button>
+                            <button ><LuPlus /></button>
+                            {/* <button onClick={handleDropdown}><LuPlus /></button> */}
                         </div>
                         <div className='hidden' id='dropdownList'>
                             <ul>

@@ -38,6 +38,7 @@ model jewelry {
   createdAt   String
   description String
   img         String
+  metal       String
   price       Int
   slug        String
   title       String
@@ -49,4 +50,5 @@ model user {
   username      String?   @unique
   email         String?   @unique
   hashedPassword String?
+  name          String
 }

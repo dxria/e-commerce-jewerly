@@ -9,6 +9,7 @@ type ShopItemsProps = {
     category: string;
     img: string;
     createdAt:string,
+    metal:string,
   }[];
 };
 

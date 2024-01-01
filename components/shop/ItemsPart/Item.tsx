@@ -9,6 +9,7 @@ type ItemProps = {
         price: number,
         category: string,
         img: string
+        metal:string,
     }
 
 }
