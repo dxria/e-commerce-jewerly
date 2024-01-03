@@ -18,8 +18,9 @@ type ReviewProps = {
 
 
 export default function Review({ feedback }: ReviewProps) {
-    return (
-        <div className='md:w-[30rem] w-64 md:flex border-2 rounded-lg border-rich-bordeaux m-11 mb-0 '>
+    return ( 
+        <div className='w-64 my-11 mx-5 lg:m-7 lg:mt-12 p-6 md:flex place-content-start border-2 rounded-lg border-rich-bordeaux'>
+        {/* <div className=' md:flex border-2 rounded-lg border-rich-bordeaux m-11 mb-0 '> */}
             <div className='w-52 p-6 m-auto md:m-0 md:pr-0'>
                 <Image alt="item" src={feedback.item.img} width={400} height={400} className="border-2 border-rich-bordeaux mb-2" />
             

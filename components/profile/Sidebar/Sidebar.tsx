@@ -14,7 +14,7 @@ export default function Sidebar({ categories }: Categories) {
             <li
               key={category}
               className={`m-2 px-12 py-1.5 text-center font-raleway font-bold text-lg text-rich-bordeaux border-rich-bordeaux border-2  `} >
-              <Link href={`/profile/${category}`}>{category}</Link>
+              <Link href={`/profile/${category}`}>{category.replace(/-/g, " ")}</Link>
             </li>
           );
         })}

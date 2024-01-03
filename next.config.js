@@ -10,7 +10,7 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: 'as1.ftcdn.net',
+                hostname: 'www.thbaker.co.uk',
                 port: '',
                 pathname: '/**',
             },

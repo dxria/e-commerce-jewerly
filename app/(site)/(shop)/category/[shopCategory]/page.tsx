@@ -10,7 +10,7 @@ import { NextResponse } from "next/server";
     console.log(searchParams)
     await ConnectToDB();
     const jewels = await prisma.jewelry.findMany()
-    
+  
     const filt = (params.shopCategory === 'all'
     ? !searchParams.metal 
       ? jewels 
@@ -34,6 +34,3 @@ import { NextResponse } from "next/server";
     return NextResponse.json({ message: `error connecting to db. ${error}` }, { status: 500 });
   }
 }
-
-
-

@@ -14,6 +14,7 @@ type JewelsProps = {
     category: string;
     img: string;
     createdAt: string,
+    metal:string,
   }[];
 };
 
@@ -28,7 +29,7 @@ export default function NewArrivals( {jewels} : JewelsProps) {
   // );
 
   return (
-    <section className="w-[70%] p-10 m-auto">
+    <section className="w-[90%] lg:w-[70%] p-10 m-auto">
       <TitleBox text="NEW ARRIVALS" />
 
       <Glider

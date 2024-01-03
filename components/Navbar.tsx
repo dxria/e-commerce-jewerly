@@ -1,52 +1,75 @@
+"use client"
+import React, { useState } from 'react';
 import Link from 'next/link'
 import { FaUser } from "react-icons/fa";
 import { BsBag } from "react-icons/bs";
+import { FaMagnifyingGlass } from "react-icons/fa6";
+import { IoIosArrowForward } from "react-icons/io";
 
 
 export default function Navbar() {
     const pages = ['Home', 'Shop', 'About', 'Contact']
+    const [isOpen, setIsOpen] = useState(false);
+
+
+    const handleClick = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const handleLink = () => {
+        setIsOpen(false);
+    }
+
     return (
+        <nav suppressHydrationWarning={true} className='sticky top-0 z-20 bg-[#FFF]'>
+            <div className="w-screen px-5 py-4 lg:px-64 flex justify-between space-x-20 lg:space-x-40 shadow-md">
+                <div className='flex space-x-4 '>
+                    <button onClick={handleClick} className="flex flex-col justify-center items-center">
+                        <span className={`bg-rich-bordeaux block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm 
+                                ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`} >
+                        </span>
+                        <span className={`bg-rich-bordeaux block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 
+                                ${isOpen ? 'opacity-0' : 'opacity-100'}`} >
+                        </span>
+                        <span className={`bg-rich-bordeaux block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm 
+                                ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`} >
+                        </span>
+                    </button>
+                    <Link href="/"><span className='flex items-center text-3xl font-dmserifdisplay font-semibold text-rich-bordeaux'>ATHENA</span>
+                        </Link>
+                </div>
 
-        <nav >
-            <div className="w-screen py-6 px-5 lg:px-64 flex justify-center space-x-20 lg:space-x-40 shadow-md">
-                {/* desktop */}
+                <div className="hidden md:flex justify-between items-center border-2 border-rich-bordeaux rounded-md px-3 py-2 w-80 font-raleway text-sm" >
+                    <input type='text' name='search' placeholder='Search for your favourite items' className='outline-none' />
+                    <label><FaMagnifyingGlass /></label>
+                </div>
 
-                <span className='flex items-center text-3xl font-dmserifdisplay font-semibold text-rich-bordeaux'>ATHENA</span>
-                <ul className="hidden lg:flex items-center space-x-24">
-                    {pages.map((page, index) => (
-                        <li key={index} className='font-raleway font-semibold'>
-                            <Link href={`/${(page.toLowerCase() === 'home' ? '' : page.toLowerCase() === 'shop' ? 'category/all' : page.toLowerCase())}`}>{page}</Link>
-                        </li>
-                    )
-                    )}
-                </ul>
                 <ul className="flex items-center space-x-1">
-                    <li className="font-raleway font-semibold text-rich-bordeaux" > <Link href="/profile"><FaUser /></Link></li>
+                    <li className="font-raleway font-semibold text-rich-bordeaux " >
+                        <Link href="/profile" className='flex space-x-2 items-center mx-2'>
+                            <div><FaUser /></div>
+                            <div className='hidden lg:block'>Log in you profile</div>
+                        </Link>
+                    </li>
                     <li className="font-raleway font-semibold text-rich-bordeaux"> <BsBag /></li>
                 </ul>
-
-                {/* mobile-tab */}
-
-                <button className="space-y-1 group lg:hidden">
-                    <div className="w-6 h-1 bg-rich-bordeaux"></div>
-                    <div className="w-6 h-1 bg-rich-bordeaux"></div>
-                    <div className="w-6 h-1 bg-rich-bordeaux"></div>
-
-
-                    <ul className='bg-[#FFF] w-screen pb-10 absolute z-10 -top-full group-focus:top-0 right-0 duration-150 flex flex-col space-y-3 justify-end'>
-                        <button className="px-10 py-8 relative ml-auto">
-                            <div className="w-6 h-1 rotate-45 absolute bg-rich-bordeaux"></div>
-                            <div className="w-6 h-1 -rotate-45 absolute bg-rich-bordeaux"></div>
-                        </button>
-                        {pages.map((page, index) => (
-                            <li key={index} className='font-raleway font-semibold flex justify-center w-full py-4 hover:bg-grey-rose hover:text-[#FFF]'>
-                                <Link href={`/${(page.toLowerCase() === 'home' ? '' : page.toLowerCase())}`}>{page}</Link>
-                            </li>
-                        ))}
-
-                    </ul>
-                </button>
+            </div>
+            <div className={`w-screen h-screen absolute z-10 transition-all duration-700 ease-out ${isOpen ? 'block bg-grey-rose/25' : 'hidden'}`}>
+                <ul className='w-full md:w-64 lg:w-[30rem] bg-[#FFF] '>
+                    <div className="md:hidden flex justify-between items-center border-2 border-rich-bordeaux rounded-md px-3 w-[90%] py-2 m-4 font-raleway text-sm" >
+                        <input type='text' name='search' placeholder='Search for yout favourite items' className='outline-none' />
+                        <label><FaMagnifyingGlass /></label>
+                    </div>
+                    {pages.map((page, index) => (
+                        <li key={index} className='font-raleway font-semibold lg:pl-[50%] w-full py-4 hover:bg-grey-rose hover:text-[#FFF]'>
+                            <Link onClick={handleLink} className='flex justify-between items-center pl-14 pr-4' href={`/${(page.toLowerCase() === 'home' ? '' : page.toLowerCase() === 'shop' ? 'category/all' : page.toLowerCase())}`}>
+                                {page}
+                                <IoIosArrowForward />
+                            </Link>
+                        </li>))}
+                </ul>
             </div>
         </nav>
+
     )
 }

@@ -6,7 +6,7 @@ export default function ProfileLayout({
     children: React.ReactNode;
 
 }) {
-    const categories = ["contact information", "order history", "wishlist"]
+    const categories = ["contact-information", "order-history", "wishlist"]
     return (
 
         <main className="flex flex-wrap md:flex-nowrap justify-center md:justify-start ">

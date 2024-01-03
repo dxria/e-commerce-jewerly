@@ -24,7 +24,7 @@ type FeedbackProps = {
 
 export default function Feedback({ feedback }: FeedbackProps) {
   return (
-    <section className="p-10 w-[70%] m-auto">
+    <section className="p-10 w-[90%] m-auto">
       <TitleBox text="FEEDBACK" />
       <Glider
         draggable

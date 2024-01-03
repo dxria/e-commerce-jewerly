@@ -15,7 +15,7 @@ export default function Shop({ address }: AddressesType) {
     return (
         <div>
             <div><b>{address.city}</b></div>
-            <div><i>Adress:</i> {address.street}</div>
+            <div><i>Address:</i> {address.street}</div>
             <div><i>Working hours:</i> {address.workHours}</div>
             <div><i>Phone Number</i> {address.phoneNumber}</div>
 

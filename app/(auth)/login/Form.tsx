@@ -71,14 +71,16 @@ export default function Form() {
                     </div>
                     <div className='my-1 font-raleway flex justify-center'>or</div>
                     <div className='flex justify-center'>
-                        <div className=''><LogInWithGoogle/></div>
+                        <div className=''><LogInWithGoogle /></div>
                     </div>
                     <div className=' my-3 font-raleway'>
                         Don&apos;t have an account yet? <Link href='/register' className='py-1 underline'>Register.</Link>
                     </div>
-
                 </div>
             </form>
+            <div>
+
+            </div>
         </div>
     )
 }

@@ -50,5 +50,5 @@ model user {
   username      String?   @unique
   email         String?   @unique
   hashedPassword String?
-  name          String
+  name          String?
 }

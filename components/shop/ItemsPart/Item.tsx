@@ -17,7 +17,7 @@ export default function Item({ item }: ItemProps) {
 
     return (
 
-        <div className="w-80 m-11 lg:m-7 lg:mt-12 p-6 border-2 border-rich-bordeaux">
+        <div className="w-80 my-11 mx-5 lg:m-7 lg:mt-12 p-6 border-2 border-rich-bordeaux">
             <Link href={`/product/${item.slug}`}>
                 <Image alt="item" src={item.img} width={500} height={500} className="border-2 border-rich-bordeaux mb-2" />
                 <div className="flex justify-between">

@@ -18,18 +18,33 @@ export default function Filteroptions() {
     )
 
     return (
-        <aside>
+        <aside className="mt-5 m-2">
+            <div className="mb-2 text-left font-raleway text-rich-bordeaux font-bold">
+                Metal
+            </div>
+            <div>
+                 <button className="flex justify-around gap-2 w-32 font-raleway border-2 rounded-full border-grey-rose px-5 py-2 mb-2"
+                    onClick={() => {
+                        let gold = 'gold'
+                        router.push(`${pathname}?${createQueryString("metal", gold.toString())}`)
+                    }}>
+                    <div className="w-6 h-6 bg-[#D4AF37] rounded-full"></div>
+                    <div>gold</div>
+                </button>
+            </div>
 
-            <button onClick={() => {
-                let gold = 'gold'
-                
-                router.push(`${pathname}?${createQueryString("metal", gold.toString())}`)
-            }}>gold</button>
+            <div>
+                <button className="flex justify-around gap-2 w-32 font-raleway border-2 rounded-full border-grey-rose px-5 py-2 mb-2"
+                    onClick={() => {
+                        let silver = 'silver'
+                        router.push(`${pathname}/?${createQueryString("metal", silver.toString())}`)
+                    }}>
+                    <div className="w-6 h-6 bg-[#A8A9AD] rounded-full"></div>
+                    <div>silver</div>
 
-            <button onClick={() => {
-                let silver = 'silver'
-                router.push(`${pathname}/?${createQueryString("metal", silver.toString())}`)
-            }}>silver</button>
+                </button>
+            </div>
+
         </aside>
     )
 }
