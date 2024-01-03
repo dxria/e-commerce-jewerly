@@ -21,9 +21,15 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@/components*": ["app/components/*"],
-      "@/shopcomponents*": ["app/shop/components/*"],
-      "@/data*": ["data.js"]
+      "@/components*": ["components/*"],
+      "@/shopcomponents*": ["components/shop/*"],
+      "@/homecomponents*": ["components/home*"],
+      "@/profilecomponents*": ["components/profile*"],
+      "@/dbcontent*": ["utils/db-connection.ts"],
+      "@/database*": ["utils/database-connection.ts"],
+      "@/models*": ["models/*"],
+      "@/api*": ["app/api/*"],
+      "@/prisma*": ["prisma/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

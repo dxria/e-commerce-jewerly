@@ -8,6 +8,19 @@ const nextConfig = {
                 port: '',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'www.thbaker.co.uk',
+                port: '',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: ' i.pinimg.com',
+                port: '',
+                pathname: '/**',
+            }
+           
         ],
     },
 }
